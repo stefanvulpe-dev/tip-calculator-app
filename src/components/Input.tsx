@@ -20,7 +20,7 @@ export function Input({
         >
           {label}
         </label>
-        <p id="error-para" className="text-xs font-bold text-orange-500 hidden">
+        <p className="error-para | text-xs font-bold text-orange-500 hidden">
           Can't be zero or negative
         </p>
       </div>

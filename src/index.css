@@ -40,7 +40,7 @@
 }
 
 @layer components {
-  #error-para.visible {
+  .error-para.visible {
     @apply block;
   }
 }

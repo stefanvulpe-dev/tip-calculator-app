@@ -11,7 +11,7 @@ export function MainContainer() {
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
     const parent = e.target.parentElement!;
     const errorParagraph =
-      parent.querySelector<HTMLParagraphElement>('#error-para')!;
+      parent.querySelector<HTMLParagraphElement>('.error-para')!;
     if (!(Number(e.target.value) > 0)) {
       errorParagraph.classList.add('visible');
       e.target.classList.add('invalid');
@@ -57,7 +57,7 @@ export function MainContainer() {
           customTipInput.value = '';
           customTipInput.classList.remove('invalid');
           const errorParagraphs =
-            document.querySelectorAll<HTMLParagraphElement>('#error-para');
+            document.querySelectorAll<HTMLParagraphElement>('.error-para');
           errorParagraphs.forEach((para) => {
             para.classList.remove('visible');
             const parent = para.parentElement?.parentElement!;
