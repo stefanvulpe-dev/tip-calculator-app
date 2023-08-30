@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Space Mono', monospace;
+  }
+
+  body {
+    @apply bg-neutral-400;
+  }
+
+  input,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+
+  input[type='radio'] {
+    appearance: none;
+  }
+
+  input[type='radio']:checked + label {
+    @apply bg-primary text-neutral-100;
+  }
+
+  :is(input[type='text'], input[type='number']).invalid {
+    @apply outline-none ring-2 ring-orange-500;
+  }
+}
+
+@layer components {
+  #error-para.visible {
+    @apply block;
+  }
+}
