@@ -19,7 +19,7 @@ export function AmountContainer({
     const tipPercentage = tip / 100;
     const total = bill * tipPercentage;
     const tipAmount = total / people;
-    return { tipAmount, total };
+    return { tipAmount, total: (total + bill) / people };
   }
 
   const { tipAmount, total } = calculateTip();
